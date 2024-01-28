@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Student MarkSheet</h1>
+    <br />
+    <p>Name: <span id="Sname"></span></p>
+    <p>Result: <span id="result"></span></p>
+  </body>
+  <script>
+    const student = {
+      name: "XYZ",
+      marks: {
+        sub1: 90,
+        sub2: 80,
+        sub3: 95,
+      },
+    };
+
+    const subObj = student.marks;
+    const total = (subObj.sub1 + subObj.sub2 + subObj.sub3) / 3;
+
+    let name = document.getElementById("Sname");
+    name.innerHTML = student.name;
+
+    const result = document.getElementById("result");
+    result.innerHTML = total;
+  </script>
+</html>
